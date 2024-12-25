@@ -7,7 +7,20 @@
 	},
 	"files": {
 		"ignoreUnknown": false,
-		"ignore": []
+		"ignore": [
+			"node_modules",
+			".next",
+			".vercel",
+			".vscode",
+			".idea",
+			".DS_Store",
+			"dist",
+			"out",
+			"build",
+			"coverage",
+			"public",
+			"tmp"
+		]
 	},
 	"formatter": {
 		"enabled": true,
@@ -24,7 +37,7 @@
 	},
 	"javascript": {
 		"formatter": {
-			"quoteStyle": "double"
+			"quoteStyle": "single"
 		}
 	}
 }
