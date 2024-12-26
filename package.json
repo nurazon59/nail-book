@@ -28,9 +28,13 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
+    "@mermaid-js/mermaid-cli": "^11.4.2",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "prisma-dbml-generator": "^0.12.0",
+    "prisma-docs-generator": "^0.8.0",
+    "prisma-erd-generator": "^1.11.2",
     "typescript": "^5"
   }
 }

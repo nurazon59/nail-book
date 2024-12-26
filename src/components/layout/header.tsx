@@ -29,15 +29,6 @@ function HideOnScroll(props: Props) {
 	);
 }
 
-const Navigation = () => (
-	<nav>
-		<Box sx={{ display: 'flex', gap: 3 }}>
-			<Link href="/">Home</Link>
-			<Link href="/about">About</Link>
-		</Box>
-	</nav>
-);
-
 export const Header = () => (
 	<React.Fragment>
 		<HideOnScroll>
@@ -66,7 +57,10 @@ export const Header = () => (
 					>
 						ネイル図鑑
 					</Typography>
-					<Navigation />
+					<Box sx={{ display: 'flex', gap: 3 }}>
+						<Link href="/">Home</Link>
+						<Link href="/about">About</Link>
+					</Box>
 				</Toolbar>
 			</AppBar>
 		</HideOnScroll>
