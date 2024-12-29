@@ -1,34 +1,14 @@
-import { AppBar, Link, Toolbar } from '@mui/material';
+import Link from 'next/link';
 
 export const Footer = () => (
-	<AppBar
-		position="fixed"
-		sx={{
-			top: 'auto',
-			bottom: 0,
-			marginTop: 'auto',
-			backgroundColor: 'primary.main',
-		}}
-	>
-		<Toolbar
-			sx={{
-				display: 'flex',
-				justifyContent: 'center',
-				alignItems: 'center',
-			}}
-		>
+	<div className="fixed bottom-0 w-full bg-primary p-2">
+		<div className="flex justify-center items-center">
 			<Link
 				href="https://itk-koshiishi.net/"
-				sx={{
-					color: 'white',
-					textDecoration: 'none',
-					'&:hover': {
-						textDecoration: 'underline',
-					},
-				}}
+				className="text-white no-underline hover:underline"
 			>
 				© 2024 Nekoyatu
 			</Link>
-		</Toolbar>
-	</AppBar>
+		</div>
+	</div>
 );

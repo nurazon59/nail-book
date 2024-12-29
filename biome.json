@@ -19,7 +19,8 @@
 			"build",
 			"coverage",
 			"public",
-			"tmp"
+			"tmp",
+			"*.js"
 		]
 	},
 	"formatter": {

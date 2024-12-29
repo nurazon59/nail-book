@@ -2,9 +2,6 @@
 
 import { SessionProvider } from 'next-auth/react';
 import './globals.css';
-import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
-import { Box, ThemeProvider } from '@mui/material';
-import { theme } from '@/lib/theme';
 import { Footer } from '@/components/layout/footer';
 import { Header } from '@/components/layout/header';
 
@@ -17,27 +14,15 @@ export default function RootLayout({
 	session: any;
 }) {
 	return (
-		<html lang="en">
-			<body>
-				<ThemeProvider theme={theme}>
-					<AppRouterCacheProvider>
-						<SessionProvider session={session}>
-							<Header />
-							<Box
-								sx={{
-									paddingBlock: 8,
-									display: 'flex',
-									justifyContent: 'center',
-									alignItems: 'center',
-									flexDirection: 'column',
-								}}
-							>
-								{children}
-							</Box>
-							<Footer />
-						</SessionProvider>
-					</AppRouterCacheProvider>
-				</ThemeProvider>
+		<html lang="en" className="h-full">
+			<body className="h-full">
+				<SessionProvider session={session}>
+					<Header />
+					<main className="flex flex-1 flex-col items-center justify-center py-8 px-4">
+						{children}
+					</main>
+					<Footer />
+				</SessionProvider>
 			</body>
 		</html>
 	);

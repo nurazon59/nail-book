@@ -1,7 +1,6 @@
-import { redirect } from 'next/navigation';
-import { getServerSession } from 'next-auth/next';
-import { Container, Typography } from '@mui/material';
 import { AuthButton } from '@/components/auth';
+import { getServerSession } from 'next-auth/next';
+import { redirect } from 'next/navigation';
 
 export default async function SignInPage() {
 	const session = await getServerSession();
@@ -11,19 +10,9 @@ export default async function SignInPage() {
 	}
 
 	return (
-		<Container
-			component="div"
-			sx={{
-				display: 'flex',
-				flexDirection: 'column',
-				alignItems: 'center',
-				justifyContent: 'center',
-			}}
-		>
-			<Typography variant="h4" gutterBottom>
-				ネイル図鑑へようこそ
-			</Typography>
+		<div>
+			ネイル図鑑へようこそ
 			<AuthButton />
-		</Container>
+		</div>
 	);
 }
