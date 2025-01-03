@@ -1,21 +1,16 @@
 import { PrismaClient } from '@prisma/client';
+import { fingerToNumber } from '@/lib/finger';
 
 const prisma = new PrismaClient();
-const fingerNames = [1, 2, 3, 4, 5];
+const fingerNames = ['親指', '人差し指', '中指', '薬指', '小指'];
 
 async function main() {
-  // ブランド名を具体的に
   const brandNames = [
-    'Elegant Touch',
-    'Glamour Glaze',
-    'Polish Paradise',
-    'Artistic Shades',
-    'Chic Nails',
-    'Luxe Lacquer',
-    'Pure Polish',
-    'Radiant Nails',
-    'Velvet Gloss',
-    'Crystal Coat',
+    'PreGel',
+    'T-Gel',
+    'Kokoist',
+    'emena',
+    'toys',
   ];
   const brands = await Promise.all(
     brandNames.map((name) =>
@@ -38,13 +33,12 @@ async function main() {
     )
   );
 
-  // ベースコートとトップコートに特徴を持たせる
-  const baseCoatFeatures = ['長持ちさせる', '速乾性', '保湿効果', '滑らかな仕上がり', 'UVカット'];
+  const baseCoatFeatures = ['ピールオフ', 'ノーサンディングベース', 'ベースコート'];
   const baseCoats = await Promise.all(
     Array.from({ length: 10 }, (_, i) =>
       prisma.baseCoat.create({
         data: {
-          name: `Base Coat - ${baseCoatFeatures[i % baseCoatFeatures.length]}`,
+          name: `${baseCoatFeatures[i % baseCoatFeatures.length]}`,
           brandId: brands[i % brands.length].id,
           image: 'https://placehold.jp/300x200.png',
         },
@@ -52,12 +46,12 @@ async function main() {
     )
   );
 
-  const topCoatFeatures = ['光沢仕上げ', 'マット仕上げ', 'UVカット', 'チップ防止', '速乾性'];
+  const topCoatFeatures = ['マット', 'ノンワイプトップ', 'トップコート'];
   const topCoats = await Promise.all(
     Array.from({ length: 10 }, (_, i) =>
       prisma.topCoat.create({
         data: {
-          name: `Top Coat - ${topCoatFeatures[i % topCoatFeatures.length]}`,
+          name: ` ${topCoatFeatures[i % topCoatFeatures.length]}`,
           brandId: brands[i % brands.length].id,
           image: 'https://placehold.jp/300x200.png',
         },
@@ -65,14 +59,13 @@ async function main() {
     )
   );
 
-  // アートネイルとカラーネイルに具体的なジャンルを追加
-  const artNailGenres = ['花柄', '幾何学模様', 'マーブルデザイン', '3Dデザイン', 'ホログラム'];
+  const artNailGenres = ['パウダー', 'パーツ類', 'インク', '3D'];
   const artNails = await Promise.all(
     Array.from({ length: 10 }, (_, i) =>
       prisma.artNail.create({
         data: {
           genre: artNailGenres[i % artNailGenres.length],
-          name: `Art Nail - ${artNailGenres[i % artNailGenres.length]}`,
+          name: `${artNailGenres[i % artNailGenres.length]}`,
           brandId: brands[i % brands.length].id,
           image: 'https://placehold.jp/300x200.png',
         },
@@ -80,13 +73,13 @@ async function main() {
     )
   );
 
-  const colorNailGenres = ['ヌーディカラー', 'パステル', 'ビビッドカラー', 'グリッター', 'メタリック'];
+  const colorNailGenres = ['赤', '青', '緑'];
   const colorNails = await Promise.all(
     Array.from({ length: 10 }, (_, i) =>
       prisma.colorNail.create({
         data: {
           genre: colorNailGenres[i % colorNailGenres.length],
-          name: `Color Nail - ${colorNailGenres[i % colorNailGenres.length]}`,
+          name: `${colorNailGenres[i % colorNailGenres.length]}`,
           brandId: brands[i % brands.length].id,
           image: 'https://placehold.jp/300x200.png',
         },
@@ -94,18 +87,10 @@ async function main() {
     )
   );
 
-  // ネイルセットにテーマ性を追加
   const nailSetThemes = [
-    'サマーバケーションセット',
-    'スプリングブロッサムセット',
-    'クラシックモノクローム',
-    'ウィンタースノーフレーク',
-    'パーティーナイトグラム',
-    'エレガントローズ',
-    'ミステリアスブラック',
-    'デイジーフィールド',
-    'ピンクオーシャン',
-    'レインボーラッシュ',
+    '自爪',
+    'アクリル',
+    'チップ'
   ];
   const nailSets = await Promise.all(
     nailSetThemes.map((theme, i) =>
@@ -113,14 +98,13 @@ async function main() {
         data: {
           title: theme,
           image: 'https://placehold.jp/300x200.png',
-          base: `Base for ${theme}`,
+          base: `${theme}`,
           userId: users[i % users.length].id,
         },
       })
     )
   );
 
-  // 指ごとに異なるブランドとアイテムを割り当て
   await Promise.all(
     nailSets.map((nailSet) =>
       Promise.all(
@@ -132,7 +116,7 @@ async function main() {
 
           return prisma.nail.create({
             data: {
-              finger: fingerName,
+              finger: fingerToNumber(fingerName),
               baseId: randomBaseCoat.id,
               colorId: randomColorNail.id,
               artId: randomArtNail.id,

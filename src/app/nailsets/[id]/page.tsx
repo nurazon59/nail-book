@@ -25,14 +25,23 @@ export default async function NailSetDetail({ params }: NailSetDetailProps) {
 	const nailset: Nailset = await response.json();
 
 	return (
-		<div className="container flex flex-col items-center">
-			<h1 className="text-2xl font-semibold">{nailset.title}</h1>
-			<Image src={nailset.image} alt={nailset.title} width={400} height={400} />
-			<p>{new Date(nailset.createdAt).toLocaleDateString()}</p>
-			<div className="flex">
-				{nailset.nails.map((nail) => (
-					<Finger key={nail.id} nail={nail} />
-				))}
+		<div className="container flex m-auto items-center justify-around flex-col sm:flex-row">
+			<div className="flex-col items-center">
+				<h1 className="text-2xl font-semibold">{nailset.title}</h1>
+				<Image
+					src={nailset.image}
+					alt={nailset.title}
+					width={600}
+					height={600}
+				/>
+				<p>{new Date(nailset.createdAt).toLocaleDateString()}</p>
+			</div>
+			<div className="flex-col">
+				{nailset.nails
+					.sort((a, b) => a.finger - b.finger)
+					.map((nail) => (
+						<Finger key={nail.id} nail={nail} />
+					))}
 			</div>
 		</div>
 	);
