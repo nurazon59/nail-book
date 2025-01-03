@@ -49,7 +49,7 @@ CREATE TABLE "ColorNail" (
 -- CreateTable
 CREATE TABLE "Nail" (
     "id" TEXT NOT NULL PRIMARY KEY,
-    "finger" TEXT NOT NULL,
+    "finger" INTEGER NOT NULL,
     "baseId" TEXT NOT NULL,
     "colorId" TEXT NOT NULL,
     "artId" TEXT NOT NULL,

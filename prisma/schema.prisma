@@ -74,7 +74,7 @@ model ColorNail {
 
 model Nail{
   id String  @id @default(cuid())
-  finger  String
+  finger  Int
   baseId String
   base    BaseCoat @relation(fields: [baseId], references: [id])
   colorId String
