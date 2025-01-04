@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const Footer = () => (
-	<div className="fixed bottom-0 w-full bg-primary p-2">
+	<div className="w-full bg-primary p-2">
 		<div className="flex justify-center items-center">
 			<Link
 				href="https://itk-koshiishi.net/"

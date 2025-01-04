@@ -18,9 +18,7 @@ export default function RootLayout({
 			<body className="h-full">
 				<SessionProvider session={session}>
 					<Header />
-					<main className="flex flex-1 flex-col items-center justify-center py-8 px-4">
-						{children}
-					</main>
+					<main className="m-auto flex-1 flex-col items-center justify-center container p-4 min-h-full">{children}</main>
 					<Footer />
 				</SessionProvider>
 			</body>

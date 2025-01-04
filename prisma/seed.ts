@@ -20,7 +20,6 @@ async function main() {
     )
   );
 
-  // ユーザーデータを作成
   const users = await Promise.all(
     Array.from({ length: 10 }, (_, i) =>
       prisma.user.create({
@@ -90,7 +89,34 @@ async function main() {
   const nailSetThemes = [
     '自爪',
     'アクリル',
-    'チップ'
+    'チップ',
+    'ジェル',
+    'スカルプ',
+    'フレンチ',
+    'グラデーション',
+    'マーブル',
+    'ホログラム',
+    'ラメ',
+    'シェル',
+    'ストーン',
+    'スタッズ',
+    'シール',
+    'エアブラシ',
+    'ミラーネイル',
+    'マットネイル',
+    'クリアネイル',
+    'ワンカラー',
+    'ニュアンスネイル',
+    'ピーコック',
+    'タイダイ',
+    'ドット',
+    'チェック',
+    'ボーダー',
+    'アニマル柄',
+    'フラワー',
+    'レース',
+    '和柄',
+    'キャラクター',
   ];
   const nailSets = await Promise.all(
     nailSetThemes.map((theme, i) =>
@@ -132,7 +158,6 @@ async function main() {
   console.log('指ごとに異なるブランドを使ったシードデータの作成が完了しました！');
 }
 
-// Prismaクライアントのクリーンアップ処理
 main()
   .catch((e) => {
     throw e;

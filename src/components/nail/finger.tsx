@@ -2,35 +2,35 @@ import { numberToFinger } from '@/lib/finger';
 import type { Nail } from '@/types';
 
 export const Finger = ({ nail }: { nail: Nail }) => (
-	<div className="bg-white shadow-lg rounded-lg p-4 m-4 flex">
-		<h2 className="w-1/6 flex items-center text-l font-semibold text-gray-800 mb-4">
+	<div className="bg-white shadow-lg rounded-lg p-2 m-2 flex flex-col items-start gap-2">
+		<h2 className="text-xl font-bold text-gray-800">
 			{numberToFinger(nail.finger)}
 		</h2>
-		<div className="flex flex-col gap-4">
-			<div className="flex items-center">
-				<Description
-					title="Base"
-					name={nail.base.name}
-					brand={nail.base.brand.name}
-				/>
-				<Description
-					title="Top"
-					name={nail.top.name}
-					brand={nail.top.brand.name}
-				/>
-			</div>
-			<div className="flex items-center">
-				<Description
-					title="Color"
-					name={nail.color.name}
-					brand={nail.color.brand.name}
-				/>
-				<Description
-					title="Art"
-					name={nail.art.name}
-					brand={nail.art.brand.name}
-				/>
-			</div>
+		<div className="grid grid-cols-2 gap-2 w-full">
+			<Description
+				title="Base"
+				name={nail.base.name}
+				brand={nail.base.brand.name}
+				color="bg-blue-100"
+			/>
+			<Description
+				title="Top"
+				name={nail.top.name}
+				brand={nail.top.brand.name}
+				color="bg-green-100"
+			/>
+			<Description
+				title="Color"
+				name={nail.color.name}
+				brand={nail.color.brand.name}
+				color="bg-pink-100"
+			/>
+			<Description
+				title="Art"
+				name={nail.art.name}
+				brand={nail.art.brand.name}
+				color="bg-yellow-100"
+			/>
 		</div>
 	</div>
 );
@@ -39,12 +39,13 @@ type DescriptionProps = {
 	title: string;
 	name: string;
 	brand: string;
+	color: string;
 };
 
-const Description = ({ title, name, brand }: DescriptionProps) => (
-	<div className="flex items-center">
-		<span className="text-gray-600 mr-2">{title}:</span>
-		<span className="text-gray-800 font-semibold">{name}</span>
-		<span className="text-gray-600 font-medium ml-2">({brand})</span>
+const Description = ({ title, name, brand, color }: DescriptionProps) => (
+	<div className={`p-2 rounded-lg shadow-sm ${color} flex flex-col`}>
+		<span className="text-sm font-medium text-gray-600">{title}</span>
+		<span className="text-sm font-bold text-gray-800">{name}</span>
+		<span className="text-sm text-gray-500">({brand})</span>
 	</div>
 );
