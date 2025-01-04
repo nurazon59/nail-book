@@ -125,6 +125,7 @@ async function main() {
           title: theme,
           image: 'https://placehold.jp/300x200.png',
           base: `${theme}`,
+          isPublic: i % 2 === 0,
           userId: users[i % users.length].id,
         },
       })

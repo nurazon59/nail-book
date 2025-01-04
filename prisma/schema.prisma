@@ -94,6 +94,7 @@ model  NailSet{
   base String
   userId String
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  isPublic Boolean @default(false)
   nails Nail[]
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt

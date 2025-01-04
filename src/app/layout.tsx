@@ -18,7 +18,9 @@ export default function RootLayout({
 			<body className="h-full">
 				<SessionProvider session={session}>
 					<Header />
-					<main className="m-auto flex-1 flex-col items-center justify-center container p-4 min-h-full">{children}</main>
+					<main className="m-auto flex-1 flex-col items-center justify-center container p-4 min-h-full">
+						{children}
+					</main>
 					<Footer />
 				</SessionProvider>
 			</body>
