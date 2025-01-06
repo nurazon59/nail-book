@@ -1,27 +1,21 @@
 import { Card } from '@/components/common';
+import { client } from '@/lib/hono';
 import type { NailSet } from '@prisma/client';
-import { getServerSession } from 'next-auth';
-import { authOptions } from './api/auth/[...nextauth]/route';
 
 export default async function Home() {
-	const baseUrl =
-		typeof window === 'undefined' ? process.env.NEXT_PUBLIC_API_BASE_URL : '';
-	const nailSetsApiResponse = await fetch(`${baseUrl}/api/nailsets`, {
-		cache: 'no-store',
-	});
-	if (!nailSetsApiResponse.ok) {
-		console.error(
-			'Failed to fetch nailsets:',
-			await nailSetsApiResponse.text(),
-		);
-		return (
-			<div className="container">
-				<h1>Error fetching nailsets</h1>
-			</div>
-		);
+	const response = await client.api.nailsets.$get();
+	const data = await response.json();
+
+	if ('error' in data) {
+		return <div>Failed to fetch nailsets</div>;
 	}
 
-	const nailsets: NailSet[] = await nailSetsApiResponse.json();
+	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+	const nailsets: NailSet[] = data.map((nailset: any) => ({
+		...nailset,
+		createdAt: new Date(nailset.createdAt),
+		updatedAt: new Date(nailset.updatedAt),
+	}));
 
 	return (
 		<div className="container">

@@ -1,11 +1,8 @@
-import type { AppType } from '@/app/api/[...route]/route';
 import { Finger } from '@/components/nail';
+import { client } from '@/lib/hono';
 import type { Nailset } from '@/types';
-import { hc } from 'hono/client';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
-
-const client = hc<AppType>('/');
 
 interface NailSetDetailProps {
 	params: { id: string };
