@@ -30,7 +30,7 @@ export const authOptions = {
 		async session({ session, token }: any) {
 			session.accessToken = token.accessToken;
 
-			session.user.id = token.id;
+			session.user.id = token.uid;
 			session.user.uid = token.uid;
 
 			return session;

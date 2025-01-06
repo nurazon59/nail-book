@@ -39,7 +39,7 @@ export const Header = ({ user }: { user: user }) => (
 						/>
 					</Link>
 				) : (
-					<Link href="/login" className="hover:underline">
+					<Link href="/auth/signin" className="hover:underline">
 						Login
 					</Link>
 				)}
