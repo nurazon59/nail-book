@@ -1,18 +1,20 @@
 'use client';
 
 import { Logo } from '@/components/common';
-import Link from 'next/link';
 import Image from 'next/image';
+import Link from 'next/link';
 
-type user = {
-	id: string;
-	name?: string | null;
-	email?: string | null;
-	image?: string | null;
-	uid: string;
-} | undefined
+type user =
+	| {
+			id: string;
+			name?: string | null;
+			email?: string | null;
+			image?: string | null;
+			uid: string;
+	  }
+	| undefined;
 
-export const Header = ({user}:{user:user}) => (
+export const Header = ({ user }: { user: user }) => (
 	<header className="bg-primary text-white shadow-md">
 		<div className="container mx-auto flex items-center justify-between py-2 px-6">
 			<Logo />

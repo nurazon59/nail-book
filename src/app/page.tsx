@@ -10,7 +10,10 @@ export default async function Home() {
 		cache: 'no-store',
 	});
 	if (!nailSetsApiResponse.ok) {
-		console.error('Failed to fetch nailsets:', await nailSetsApiResponse.text());
+		console.error(
+			'Failed to fetch nailsets:',
+			await nailSetsApiResponse.text(),
+		);
 		return (
 			<div className="container">
 				<h1>Error fetching nailsets</h1>

@@ -33,7 +33,7 @@ function SessionWrapper({ children }: { children: React.ReactNode }) {
 
 	return (
 		<>
-			<Header user={session?.user}/>
+			<Header user={session?.user} />
 			<main className="m-auto flex-1 flex-col items-center justify-center container p-4 min-h-full">
 				{children}
 			</main>

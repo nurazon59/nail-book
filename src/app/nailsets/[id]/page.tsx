@@ -1,7 +1,11 @@
+import type { AppType } from '@/app/api/[...route]/route';
 import { Finger } from '@/components/nail';
 import type { Nailset } from '@/types';
+import { hc } from 'hono/client';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
+
+const client = hc<AppType>('/');
 
 interface NailSetDetailProps {
 	params: { id: string };
@@ -13,16 +17,17 @@ export async function generateStaticParams() {
 
 export default async function NailSetDetail({ params }: NailSetDetailProps) {
 	const { id } = await params;
-	const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || '';
-	const response = await fetch(`${baseUrl}/api/nailsets/${id}`, {
-		cache: 'no-store',
-	});
+	const response = await client.api.nailsets[':id'].$get({ param: { id } });
 
-	if (!response.ok) {
-		notFound();
+	const data = await response.json();
+	if ('error' in data) {
+		return notFound();
 	}
-
-	const nailset: Nailset = await response.json();
+	const nailset: Nailset = {
+		...data,
+		createdAt: new Date(data.createdAt),
+		updatedAt: new Date(data.updatedAt),
+	};
 
 	return (
 		<div className="container m-auto items-center justify-around flex sm:flex-row">
