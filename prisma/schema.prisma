@@ -37,7 +37,8 @@ model BaseCoat {
   brand Brand @relation(fields: [brandId], references: [id])
   image String
   nails Nail[]
-  User User[]
+  userId String
+  User User @relation(fields: [userId], references: [id])
 }
 
 model TopCoat {
@@ -46,8 +47,9 @@ model TopCoat {
   brandId String
   brand Brand @relation(fields: [brandId], references: [id])
   image String
+  userId String
   nails Nail[]
-  User User[]
+  User User @relation(fields: [userId], references: [id])
 }
 
 model ArtNail {
@@ -57,8 +59,9 @@ model ArtNail {
   brandId String
   brand Brand @relation(fields: [brandId], references: [id])
   image String
+  userId String
   nails Nail[]
-  User User[]
+  User User @relation(fields: [userId], references: [id])
 }
 
 model ColorNail {
@@ -68,8 +71,9 @@ model ColorNail {
   brandId String
   brand Brand @relation(fields: [brandId], references: [id])
   image String
+  userId String
   nails Nail[]
-  User User[]
+  User User @relation(fields: [userId], references: [id])
 }
 
 model Nail{
