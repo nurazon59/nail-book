@@ -34,3 +34,15 @@ export type Nail = PrismaNail & {
 export type Nailset = NailSet & {
 	nails: Nail[];
 };
+
+export type Tool = {
+	id: string;
+	image: string;
+	userId: string;
+	name: string;
+	brandId: string;
+	brand: {
+		id: string;
+		name: string;
+	};
+};
