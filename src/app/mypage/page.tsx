@@ -1,4 +1,5 @@
 import { SignoutButton } from '@/components/auth';
+import { CreateButton } from '@/components/nail/create-button';
 import { NailTool } from '@/components/nail/tool';
 import { client } from '@/lib/hono';
 import type { Tool } from '@/types';
@@ -37,6 +38,7 @@ export default async function MyPage() {
 		<div>
 			<h1>My Page</h1>
 			<SignoutButton />
+			<CreateButton userId={userId} />
 			<div className="flex flex-col">
 				{basecoats.map((basecoat) => (
 					<NailTool key={basecoat.id} prop={basecoat} title="basecoat" />
