@@ -100,8 +100,8 @@ importers:
         specifier: 0.8.0
         version: 0.8.0
       prisma-erd-generator:
-        specifier: 2.0.2
-        version: 2.0.2(@prisma/client@6.3.0(prisma@6.3.0(typescript@5.7.3))(typescript@5.7.3))(puppeteer@19.11.1(typescript@5.7.3))(ts-node@10.9.2(@types/node@22.12.0)(typescript@5.7.3))(typescript@5.7.3)
+        specifier: 2.0.4
+        version: 2.0.4(@prisma/client@6.3.0(prisma@6.3.0(typescript@5.7.3))(typescript@5.7.3))(puppeteer@19.11.1(typescript@5.7.3))(ts-node@10.9.2(@types/node@22.12.0)(typescript@5.7.3))(typescript@5.7.3)
       typescript:
         specifier: 5.7.3
         version: 5.7.3
@@ -2701,8 +2701,8 @@ packages:
     resolution: {integrity: sha512-w+lwFsslDtsCilWauQlKyEIPTtT4wXbG1sRnSb1NldEVF572DtcHTbcp54UGz7i1WaOuLK2M1YCp1UFRf62Nxw==}
     hasBin: true
 
-  prisma-erd-generator@2.0.2:
-    resolution: {integrity: sha512-53lC0dc2pTftCBmgeWSuETH6ePIGItD4JOE1JW8fVTcRkDij260XaskulJlsbNWrGVd6OgWSAxGwydVUop5u0Q==}
+  prisma-erd-generator@2.0.4:
+    resolution: {integrity: sha512-XVdaojAc75GaWq2Ia6orFqDcP8vEQZdooKtMWNJNV9cC/JCTh3OW6Zs+mMLedLEv96Xnjfzp7Tzld6dm/KuOnA==}
     engines: {node: '>=18'}
     hasBin: true
     peerDependencies:
@@ -6223,7 +6223,7 @@ snapshots:
       - encoding
       - supports-color
 
-  prisma-erd-generator@2.0.2(@prisma/client@6.3.0(prisma@6.3.0(typescript@5.7.3))(typescript@5.7.3))(puppeteer@19.11.1(typescript@5.7.3))(ts-node@10.9.2(@types/node@22.12.0)(typescript@5.7.3))(typescript@5.7.3):
+  prisma-erd-generator@2.0.4(@prisma/client@6.3.0(prisma@6.3.0(typescript@5.7.3))(typescript@5.7.3))(puppeteer@19.11.1(typescript@5.7.3))(ts-node@10.9.2(@types/node@22.12.0)(typescript@5.7.3))(typescript@5.7.3):
     dependencies:
       '@mermaid-js/mermaid-cli': 11.4.2(puppeteer@19.11.1(typescript@5.7.3))(ts-node@10.9.2(@types/node@22.12.0)(typescript@5.7.3))(typescript@5.7.3)
       '@prisma/client': 6.3.0(prisma@6.3.0(typescript@5.7.3))(typescript@5.7.3)
