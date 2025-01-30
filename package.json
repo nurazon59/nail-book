@@ -40,18 +40,18 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
-		"@mermaid-js/mermaid-cli": "^11.4.2",
-		"@types/node": "^22.10.7",
+		"@mermaid-js/mermaid-cli": "11.4.2",
+		"@types/node": "22.10.7",
 		"@types/react": "^19.0.7",
 		"@types/react-dom": "^19.0.3",
-		"husky": "^9.1.7",
-		"lint-staged": "^15.4.1",
-		"prisma": "^6.3.0",
-		"prisma-dbml-generator": "^0.12.0",
-		"prisma-docs-generator": "^0.8.0",
-		"prisma-erd-generator": "^1.11.2",
-		"sort-package-json": "^2.14.0",
-		"typescript": "^5.7.3"
+		"husky": "9.1.7",
+		"lint-staged": "15.4.1",
+		"prisma": "6.3.0",
+		"prisma-dbml-generator": "0.12.0",
+		"prisma-docs-generator": "0.8.0",
+		"prisma-erd-generator": "1.11.2",
+		"sort-package-json": "2.14.0",
+		"typescript": "5.7.3"
 	},
 	"prisma": {
 		"seed": "tsx prisma/seed.ts"
