@@ -79,10 +79,10 @@ importers:
         specifier: 1.9.4
         version: 1.9.4
       '@mermaid-js/mermaid-cli':
-        specifier: ^11.4.2
+        specifier: 11.4.2
         version: 11.4.2(puppeteer@19.11.1(typescript@5.7.3))(ts-node@10.9.2(@types/node@22.10.7)(typescript@5.7.3))(typescript@5.7.3)
       '@types/node':
-        specifier: ^22.10.7
+        specifier: 22.10.7
         version: 22.10.7
       '@types/react':
         specifier: ^19.0.7
@@ -91,28 +91,28 @@ importers:
         specifier: ^19.0.3
         version: 19.0.3(@types/react@19.0.7)
       husky:
-        specifier: ^9.1.7
+        specifier: 9.1.7
         version: 9.1.7
       lint-staged:
-        specifier: ^15.4.1
+        specifier: 15.4.1
         version: 15.4.1
       prisma:
-        specifier: ^6.3.0
+        specifier: 6.3.0
         version: 6.3.0(typescript@5.7.3)
       prisma-dbml-generator:
-        specifier: ^0.12.0
+        specifier: 0.12.0
         version: 0.12.0
       prisma-docs-generator:
-        specifier: ^0.8.0
+        specifier: 0.8.0
         version: 0.8.0
       prisma-erd-generator:
-        specifier: ^1.11.2
+        specifier: 1.11.2
         version: 1.11.2(@prisma/client@6.3.0(prisma@6.3.0(typescript@5.7.3))(typescript@5.7.3))(typescript@5.7.3)
       sort-package-json:
-        specifier: ^2.14.0
+        specifier: 2.14.0
         version: 2.14.0
       typescript:
-        specifier: ^5.7.3
+        specifier: 5.7.3
         version: 5.7.3
 
 packages:
@@ -5698,7 +5698,7 @@ snapshots:
 
   extract-zip@2.0.1:
     dependencies:
-      debug: 4.3.4
+      debug: 4.4.0
       get-stream: 5.2.0
       yauzl: 2.10.0
     optionalDependencies:
@@ -6611,7 +6611,7 @@ snapshots:
   normalize-package-data@2.5.0:
     dependencies:
       hosted-git-info: 2.8.9
-      resolve: 1.22.2
+      resolve: 1.22.10
       semver: 5.7.2
       validate-npm-package-license: 3.0.4
 
