@@ -43,7 +43,7 @@ type DescriptionProps = {
 };
 
 const Description = ({ title, name, brand, color }: DescriptionProps) => (
-	<div className={`p-2 rounded-lg shadow-sm ${color} flex flex-col`}>
+	<div className={`p-2 rounded-lg shadow-xs ${color} flex flex-col`}>
 		<span className="text-sm font-medium text-gray-600">{title}</span>
 		<span className="text-sm font-bold text-gray-800">{name}</span>
 		<span className="text-sm text-gray-500">({brand})</span>

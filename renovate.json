@@ -1,3 +1,16 @@
 {
-	"automerge": true
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    "docker:pinDigests",
+    "helpers:pinGitHubActionDigests",
+    ":configMigration",
+    ":pinDevDependencies"
+  ],
+  "timezone": "Asia/Tokyo",
+  "labels": ["renovate"],
+  "assignees": ["Itsuki54"],
+  "automerge": true,
+  "automergeType": "pr",
+  "rebaseWhen": "automerging"
 }
