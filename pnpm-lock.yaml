@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@hono/zod-validator':
         specifier: ^0.6.0
-        version: 0.6.0(hono@4.7.10)(zod@3.25.36)
+        version: 0.6.0(hono@4.7.10)(zod@3.25.42)
       '@next-auth/prisma-adapter':
         specifier: ^1.0.7
         version: 1.0.7(@prisma/client@6.8.2(prisma@6.8.2(typescript@5.8.3))(typescript@5.8.3))(next-auth@4.24.11(next@15.3.3(@opentelemetry/api@1.4.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0))
@@ -73,7 +73,7 @@ importers:
         version: 4.19.4
       zod:
         specifier: ^3.24.1
-        version: 3.25.36
+        version: 3.25.42
     devDependencies:
       '@biomejs/biome':
         specifier: 1.9.4
@@ -3802,8 +3802,8 @@ packages:
     resolution: {integrity: sha512-9qv4rlDiopXg4E69k+vMHjNN63YFMe9sZMrdlvKnCjlCRWeCBswPPMPUfx+ipsAWq1LXHe70RcbaHdJJpS6hyQ==}
     engines: {node: '>= 10'}
 
-  zod@3.25.36:
-    resolution: {integrity: sha512-eRFS3i8T0IrpGdL8HQyqFAugGOn7jOjyGgGdtv5NY4Wkhi7lJDk732bNZ609YMIGFbLoaj6J69O1Mura23gfIw==}
+  zod@3.25.42:
+    resolution: {integrity: sha512-PcALTLskaucbeHc41tU/xfjfhcz8z0GdhhDcSgrCTmSazUuqnYqiXO63M0QUBVwpBlsLsNVn5qHSC5Dw3KZvaQ==}
 
 snapshots:
 
@@ -4025,10 +4025,10 @@ snapshots:
       '@tanstack/vue-virtual': 3.11.2(vue@3.5.13(typescript@5.8.3))
       vue: 3.5.13(typescript@5.8.3)
 
-  '@hono/zod-validator@0.6.0(hono@4.7.10)(zod@3.25.36)':
+  '@hono/zod-validator@0.6.0(hono@4.7.10)(zod@3.25.42)':
     dependencies:
       hono: 4.7.10
-      zod: 3.25.36
+      zod: 3.25.42
 
   '@iconify/types@2.0.0': {}
 
@@ -7774,4 +7774,4 @@ snapshots:
       compress-commons: 4.1.2
       readable-stream: 3.6.2
 
-  zod@3.25.36: {}
+  zod@3.25.42: {}
