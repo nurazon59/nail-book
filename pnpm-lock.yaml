@@ -10,13 +10,13 @@ importers:
     dependencies:
       '@hono/zod-validator':
         specifier: ^0.7.0
-        version: 0.7.0(hono@4.7.11)(zod@3.25.42)
+        version: 0.7.0(hono@4.7.11)(zod@3.25.56)
       '@next-auth/prisma-adapter':
         specifier: ^1.0.7
-        version: 1.0.7(@prisma/client@6.8.2(prisma@6.8.2(typescript@5.8.3))(typescript@5.8.3))(next-auth@4.24.11(next@15.3.3(@opentelemetry/api@1.4.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0))
+        version: 1.0.7(@prisma/client@6.9.0(prisma@6.8.2(typescript@5.8.3))(typescript@5.8.3))(next-auth@4.24.11(next@15.3.3(@opentelemetry/api@1.4.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0))
       '@prisma/client':
         specifier: ^6.3.0
-        version: 6.8.2(prisma@6.8.2(typescript@5.8.3))(typescript@5.8.3)
+        version: 6.9.0(prisma@6.8.2(typescript@5.8.3))(typescript@5.8.3)
       '@radix-ui/react-slot':
         specifier: ^1.1.1
         version: 1.2.3(@types/react@19.1.6)(react@19.1.0)
@@ -73,7 +73,7 @@ importers:
         version: 4.19.4
       zod:
         specifier: ^3.24.1
-        version: 3.25.42
+        version: 3.25.56
     devDependencies:
       '@biomejs/biome':
         specifier: 1.9.4
@@ -107,7 +107,7 @@ importers:
         version: 0.8.0
       prisma-erd-generator:
         specifier: 1.11.2
-        version: 1.11.2(@prisma/client@6.8.2(prisma@6.8.2(typescript@5.8.3))(typescript@5.8.3))(typescript@5.8.3)
+        version: 1.11.2(@prisma/client@6.9.0(prisma@6.8.2(typescript@5.8.3))(typescript@5.8.3))(typescript@5.8.3)
       sort-package-json:
         specifier: 3.2.1
         version: 3.2.1
@@ -672,8 +672,8 @@ packages:
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
     engines: {node: '>=14'}
 
-  '@prisma/client@6.8.2':
-    resolution: {integrity: sha512-5II+vbyzv4si6Yunwgkj0qT/iY0zyspttoDrL3R4BYgLdp42/d2C8xdi9vqkrYtKt9H32oFIukvyw3Koz5JoDg==}
+  '@prisma/client@6.9.0':
+    resolution: {integrity: sha512-Gg7j1hwy3SgF1KHrh0PZsYvAaykeR0PaxusnLXydehS96voYCGt1U5zVR31NIouYc63hWzidcrir1a7AIyCsNQ==}
     engines: {node: '>=18.18'}
     peerDependencies:
       prisma: '*'
@@ -3802,8 +3802,8 @@ packages:
     resolution: {integrity: sha512-9qv4rlDiopXg4E69k+vMHjNN63YFMe9sZMrdlvKnCjlCRWeCBswPPMPUfx+ipsAWq1LXHe70RcbaHdJJpS6hyQ==}
     engines: {node: '>= 10'}
 
-  zod@3.25.42:
-    resolution: {integrity: sha512-PcALTLskaucbeHc41tU/xfjfhcz8z0GdhhDcSgrCTmSazUuqnYqiXO63M0QUBVwpBlsLsNVn5qHSC5Dw3KZvaQ==}
+  zod@3.25.56:
+    resolution: {integrity: sha512-rd6eEF3BTNvQnR2e2wwolfTmUTnp70aUTqr0oaGbHifzC3BKJsoV+Gat8vxUMR1hwOKBs6El+qWehrHbCpW6SQ==}
 
 snapshots:
 
@@ -4025,10 +4025,10 @@ snapshots:
       '@tanstack/vue-virtual': 3.11.2(vue@3.5.13(typescript@5.8.3))
       vue: 3.5.13(typescript@5.8.3)
 
-  '@hono/zod-validator@0.7.0(hono@4.7.11)(zod@3.25.42)':
+  '@hono/zod-validator@0.7.0(hono@4.7.11)(zod@3.25.56)':
     dependencies:
       hono: 4.7.11
-      zod: 3.25.42
+      zod: 3.25.56
 
   '@iconify/types@2.0.0': {}
 
@@ -4198,9 +4198,9 @@ snapshots:
     dependencies:
       langium: 3.0.0
 
-  '@next-auth/prisma-adapter@1.0.7(@prisma/client@6.8.2(prisma@6.8.2(typescript@5.8.3))(typescript@5.8.3))(next-auth@4.24.11(next@15.3.3(@opentelemetry/api@1.4.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0))':
+  '@next-auth/prisma-adapter@1.0.7(@prisma/client@6.9.0(prisma@6.8.2(typescript@5.8.3))(typescript@5.8.3))(next-auth@4.24.11(next@15.3.3(@opentelemetry/api@1.4.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0))':
     dependencies:
-      '@prisma/client': 6.8.2(prisma@6.8.2(typescript@5.8.3))(typescript@5.8.3)
+      '@prisma/client': 6.9.0(prisma@6.8.2(typescript@5.8.3))(typescript@5.8.3)
       next-auth: 4.24.11(next@15.3.3(@opentelemetry/api@1.4.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
 
   '@next/env@15.3.3': {}
@@ -4248,7 +4248,7 @@ snapshots:
   '@pkgjs/parseargs@0.11.0':
     optional: true
 
-  '@prisma/client@6.8.2(prisma@6.8.2(typescript@5.8.3))(typescript@5.8.3)':
+  '@prisma/client@6.9.0(prisma@6.8.2(typescript@5.8.3))(typescript@5.8.3)':
     optionalDependencies:
       prisma: 6.8.2(typescript@5.8.3)
       typescript: 5.8.3
@@ -6966,10 +6966,10 @@ snapshots:
       - encoding
       - supports-color
 
-  prisma-erd-generator@1.11.2(@prisma/client@6.8.2(prisma@6.8.2(typescript@5.8.3))(typescript@5.8.3))(typescript@5.8.3):
+  prisma-erd-generator@1.11.2(@prisma/client@6.9.0(prisma@6.8.2(typescript@5.8.3))(typescript@5.8.3))(typescript@5.8.3):
     dependencies:
       '@mermaid-js/mermaid-cli': 10.9.1(typescript@5.8.3)
-      '@prisma/client': 6.8.2(prisma@6.8.2(typescript@5.8.3))(typescript@5.8.3)
+      '@prisma/client': 6.9.0(prisma@6.8.2(typescript@5.8.3))(typescript@5.8.3)
       '@prisma/generator-helper': 5.22.0
       dotenv: 16.4.7
     transitivePeerDependencies:
@@ -7774,4 +7774,4 @@ snapshots:
       compress-commons: 4.1.2
       readable-stream: 3.6.2
 
-  zod@3.25.42: {}
+  zod@3.25.56: {}
