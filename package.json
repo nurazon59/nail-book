@@ -39,7 +39,7 @@
 		"zod": "^3.24.1"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "2.0.0",
+		"@biomejs/biome": "2.0.2",
 		"@mermaid-js/mermaid-cli": "11.6.0",
 		"@types/node": "22.15.32",
 		"@types/react": "19.1.8",
