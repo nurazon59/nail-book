@@ -41,7 +41,7 @@
 	"devDependencies": {
 		"@biomejs/biome": "2.2.2",
 		"@mermaid-js/mermaid-cli": "11.9.0",
-		"@types/node": "22.18.0",
+		"@types/node": "22.18.1",
 		"@types/react": "19.1.12",
 		"@types/react-dom": "19.1.9",
 		"husky": "9.1.7",
