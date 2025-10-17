@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@hono/zod-validator':
         specifier: ^0.7.0
-        version: 0.7.4(hono@4.9.12)(zod@4.1.12)
+        version: 0.7.4(hono@4.10.0)(zod@4.1.12)
       '@next-auth/prisma-adapter':
         specifier: ^1.0.7
         version: 1.0.7(@prisma/client@6.17.1(prisma@6.17.1(typescript@5.9.3))(typescript@5.9.3))(next-auth@4.24.11(next@15.5.5(@opentelemetry/api@1.4.1)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(react-dom@19.2.0(react@19.2.0))(react@19.2.0))
@@ -37,7 +37,7 @@ importers:
         version: 2.1.1
       hono:
         specifier: ^4.6.15
-        version: 4.9.12
+        version: 4.10.0
       lucide-react:
         specifier: ^0.546.0
         version: 0.546.0(react@19.2.0)
@@ -2138,8 +2138,8 @@ packages:
   highlight.js@10.7.3:
     resolution: {integrity: sha512-tzcUFauisWKNHaRkN4Wjl/ZA07gENAjFl3J/c480dprkGTg5EQstgaNFqBfUqCq54kZRIEcreTsAgF/m2quD7A==}
 
-  hono@4.9.12:
-    resolution: {integrity: sha512-SrTC0YxqPwnN7yKa8gg/giLyQ2pILCKoideIHbYbFQlWZjYt68D2A4Ae1hehO/aDQ6RmTcpqOV/O2yBtMzx/VQ==}
+  hono@4.10.0:
+    resolution: {integrity: sha512-V/S2IyKL6fk5+bEjiQzg74r5BglqAwU20IX3WjdTUFgvmtSqAZjSxN/Zb5lr6/JXVmH0aqkqOq++3UgzOi9+4Q==}
     engines: {node: '>=16.9.0'}
 
   hosted-git-info@2.8.9:
@@ -4097,9 +4097,9 @@ snapshots:
       '@tanstack/vue-virtual': 3.11.2(vue@3.5.13(typescript@5.9.3))
       vue: 3.5.13(typescript@5.9.3)
 
-  '@hono/zod-validator@0.7.4(hono@4.9.12)(zod@4.1.12)':
+  '@hono/zod-validator@0.7.4(hono@4.10.0)(zod@4.1.12)':
     dependencies:
-      hono: 4.9.12
+      hono: 4.10.0
       zod: 4.1.12
 
   '@iconify/types@2.0.0': {}
@@ -6115,7 +6115,7 @@ snapshots:
 
   highlight.js@10.7.3: {}
 
-  hono@4.9.12: {}
+  hono@4.10.0: {}
 
   hosted-git-info@2.8.9: {}
 
