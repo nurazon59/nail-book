@@ -9,7 +9,7 @@
   ],
   "timezone": "Asia/Tokyo",
   "labels": ["renovate"],
-  "assignees": ["Itsuki54"],
+  "assignees": ["nurazon59"],
   "automerge": true,
   "automergeType": "pr",
   "rebaseWhen": "automerging"
