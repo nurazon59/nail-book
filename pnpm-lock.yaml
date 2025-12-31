@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@hono/zod-validator':
         specifier: ^0.7.0
-        version: 0.7.6(hono@4.11.3)(zod@4.2.1)
+        version: 0.7.6(hono@4.11.3)(zod@4.3.2)
       '@next-auth/prisma-adapter':
         specifier: ^1.0.7
         version: 1.0.7(@prisma/client@7.2.0(prisma@7.2.0(@types/react@19.2.7)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(typescript@5.9.3))(typescript@5.9.3))(next-auth@4.24.13(next@16.1.1(@opentelemetry/api@1.4.1)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react-dom@19.2.3(react@19.2.3))(react@19.2.3))
@@ -73,7 +73,7 @@ importers:
         version: 4.21.0
       zod:
         specifier: ^4.0.0
-        version: 4.2.1
+        version: 4.3.2
     devDependencies:
       '@biomejs/biome':
         specifier: 2.3.10
@@ -3941,6 +3941,7 @@ packages:
   whatwg-encoding@3.1.1:
     resolution: {integrity: sha512-6qN4hJdMwfYBtE3YBTTHhoeuUrDBPZmbQaxWAqSALV/MeEnR5z1xd8UKud2RAkFoPkmB+hli1TZSnyi84xz1vQ==}
     engines: {node: '>=18'}
+    deprecated: Use @exodus/bytes instead for a more spec-conformant and faster implementation
 
   whatwg-mimetype@4.0.0:
     resolution: {integrity: sha512-QaKxh0eNIi2mE9p2vEdzfagOKHCcj1pJ56EEHGQOVxp8r9/iszLUUV7v89x9O1p/T+NlTM5W7jW6+cz4Fq1YVg==}
@@ -4023,8 +4024,8 @@ packages:
     resolution: {integrity: sha512-9qv4rlDiopXg4E69k+vMHjNN63YFMe9sZMrdlvKnCjlCRWeCBswPPMPUfx+ipsAWq1LXHe70RcbaHdJJpS6hyQ==}
     engines: {node: '>= 10'}
 
-  zod@4.2.1:
-    resolution: {integrity: sha512-0wZ1IRqGGhMP76gLqz8EyfBXKk0J2qo2+H3fi4mcUP/KtTocoX08nmIAHl1Z2kJIZbZee8KOpBCSNPRgauucjw==}
+  zod@4.3.2:
+    resolution: {integrity: sha512-b8L8yn4rIVfiXyHAmnr52/ZEpDumlT0bmxiq3Ws1ybrinhflGpt12Hvv54kYnEsGPRs6o/Ka3/ppA2OWY21IVg==}
 
 snapshots:
 
@@ -4271,10 +4272,10 @@ snapshots:
     dependencies:
       hono: 4.10.6
 
-  '@hono/zod-validator@0.7.6(hono@4.11.3)(zod@4.2.1)':
+  '@hono/zod-validator@0.7.6(hono@4.11.3)(zod@4.3.2)':
     dependencies:
       hono: 4.11.3
-      zod: 4.2.1
+      zod: 4.3.2
 
   '@iconify/types@2.0.0': {}
 
@@ -8227,4 +8228,4 @@ snapshots:
       compress-commons: 4.1.2
       readable-stream: 3.6.2
 
-  zod@4.2.1: {}
+  zod@4.3.2: {}
