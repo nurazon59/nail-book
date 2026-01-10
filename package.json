@@ -64,5 +64,5 @@
 	"lint-staged": {
 		"*.{ts,tsx}": "biome check --write ./src"
 	},
-	"packageManager": "pnpm@10.27.0"
+	"packageManager": "pnpm@10.28.0"
 }
